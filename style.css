@@ -1,0 +1,780 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #e5e5e5;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  min-height: 400px;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+}
+
+.opening-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center 85%; /* Adjust this value to show the door */
+  z-index: 1;
+}
+
+.centered-title {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 3.2rem;
+  color: #fff;
+  letter-spacing: 0.15em;
+  text-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  background: rgba(30,30,30,0.18);
+  padding: 0.3em 2em;
+  border-radius: 18px;
+  font-weight: 800;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.scroll-down span {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  margin-bottom: 4px;
+  animation: bounce 1.5s infinite;
+  opacity: 0.85;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(45deg);}
+  50% { transform: translateY(12px) rotate(45deg);}
+}
+
+.about-section {
+  background: #e5e5e5;
+  padding: 80px 0 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 700px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  padding: 2.5em 2em;
+  font-size: 1.15rem;
+  color: #23272f;
+  font-family: 'Roboto', Arial, sans-serif; /* Modern, readable font */
+  line-height: 2.1;
+  margin: 0 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  font-weight: 300;
+  border-left: 5px solid #bfc9d1;
+}
+
+.about-content b,
+.about-content strong {
+  color: inherit;
+  font-weight: 500;
+  background: none;
+  letter-spacing: 0.01em;
+}
+
+.about-content br {
+  line-height: 2.2;
+}
+
+.apartments-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 32px 0 0 0;
+}
+
+.apartments-buttons a.apartment-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #222;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 16px;
+  padding: 1.2em 3em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+  letter-spacing: 0.07em;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  margin: 0;
+}
+
+.apartments-buttons a.apartment-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.6;
+  filter: blur(6px) brightness(0.7);
+  transition: opacity 0.2s;
+}
+
+.apartments-buttons a.apartment-btn:nth-child(1)::before {
+  background: url('obrazky/studio.jpg') center center/cover no-repeat;
+}
+.apartments-buttons a.apartment-btn:nth-child(2)::before {
+  background: url('obrazky/Apartman1.jpg') center center/cover no-repeat;
+}
+.apartments-buttons a.apartment-btn:nth-child(3)::before {
+  background: url('obrazky/Apartman2.jpg') center center/cover no-repeat;
+}
+
+.apartments-buttons a.apartment-btn span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.apartments-buttons a.apartment-btn:hover::before {
+  opacity: 0.8;
+}
+
+.apartments-buttons a.apartment-btn:hover {
+  background: #3b4a5a;
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.reviews-section {
+  background: #f6f7fa;
+  padding: 60px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-section h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  color: #1a2634;
+  margin-bottom: 32px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.reviews-list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.2em 1.5em;
+  max-width: 320px;
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+
+.review-text {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.review-author {
+  color: #3b4a5a;
+  font-size: 0.98rem;
+  text-align: right;
+}
+
+.contact-section {
+  background: #e5e5e5;
+  padding: 60px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  color: #1a2634;
+  margin-bottom: 32px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.contact-content {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact-form {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2em 2em 1em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 270px;
+  flex: 1 1 320px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1rem;
+  border: 1px solid #d2d7df;
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  background: #f8fafc;
+  resize: none;
+  transition: border 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid #3b4a5a;
+  outline: none;
+}
+
+.contact-form button {
+  background: #1a2634;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9em 0;
+  cursor: pointer;           /* Make it look clickable */
+  opacity: 1;                /* Full opacity */
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background: #3b4a5a;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.13);
+}
+
+.contact-note {
+  font-size: 0.95rem;
+  color: #6b7683;
+  margin-top: 10px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.08rem;
+  color: #23272f;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2em 2em 1em 2em;
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+
+.contact-info a {
+  color: #3b4a5a;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.subpage-nav {
+  padding: 48px 0 0 0; /* More top space */
+  text-align: center;
+}
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  margin-bottom: 24px;
+}
+.logo-link:hover {
+  opacity: 0.7;
+}
+.vila-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.vila-logo svg {
+  width: 120px;   /* Bigger logo */
+  height: 40px;
+}
+
+.vila-logo-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem; /* Bigger text */
+  font-weight: 800;
+  color: #222;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+.apartment-hero {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  min-height: 220px;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+}
+
+.apartment-hero-img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px) brightness(0.7); /* Less blur */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.apartment-hero-title {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  letter-spacing: 0.15em;
+  text-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  background: rgba(30,30,30,0.18);
+  padding: 0.3em 1.5em;
+  border-radius: 14px;
+  font-weight: 800;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+.apartment-gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f6f7fa;
+  padding: 60px 0 40px 0;
+}
+
+.apartment-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  min-width: 240px;
+  max-width: 700px;
+  width: 100%;
+  justify-content: center;
+}
+
+.apartment-gallery img {
+  width: 220px;
+  height: 160px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  object-fit: cover;
+  background: #e5e5e5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.apartment-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+.apartment-description {
+  max-width: 400px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  padding: 2em 2em;
+  font-size: 1.13rem;
+  color: #23272f;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.7;
+  margin: 0 16px;
+}
+.apartment-description h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  color: #1a2634;
+  font-weight: 800;
+}
+.apartment-description ul {
+  margin: 1.2em 0 0 0;
+  padding-left: 1.2em;
+  color: #3b4a5a;
+  font-size: 1.05rem;
+}
+.apartment-gallery-carousel {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 32px auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  background: #fff;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+}
+
+.carousel-track img {
+  width: 100vw;
+  max-width: 700px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: filter 0.2s;
+  background: #e5e5e5;
+}
+
+.carousel-track img:not(:last-child) {
+  margin-right: 0;
+}
+
+.apartment-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 700px;
+  margin: 0 auto 36px auto;
+  width: 100%;
+}
+
+.apartment-gallery-grid a {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.apartment-gallery-grid a:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.apartment-gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  background: #e5e5e5;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(30,32,38,0.92);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  background: #fff;
+  display: block;
+  margin: auto;
+}
+.lightbox:target {
+  display: flex;
+}
+.lightbox-close {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  cursor: zoom-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Responsive & Mobile-Friendly Styles --- */
+
+/* General image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Apartments buttons responsive */
+.apartments-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 32px 0 0 0;
+}
+@media (max-width: 700px) {
+  .apartments-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .apartment-btn {
+    width: 90vw;
+    max-width: 340px;
+    text-align: center;
+  }
+}
+
+/* Reviews section responsive */
+.reviews-list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.review {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.2em 1.5em;
+  max-width: 320px;
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+@media (max-width: 700px) {
+  .reviews-list {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .review {
+    width: 90vw;
+    max-width: 340px;
+  }
+}
+
+/* Contact section responsive */
+.contact-content {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+}
+@media (max-width: 900px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+  }
+}
+
+/* Gallery grid responsive */
+.apartment-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 700px;
+  margin: 0 auto 36px auto;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .apartment-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .apartment-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Hero section responsive */
+.apartment-hero{
+  width: 100vw;
+  min-height: 220px;
+  max-height: 400px;
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .apartment-hero,
+  .hero {
+    min-height: 140px;
+    height: 28vh;
+  }
+  .apartment-hero-title,
+  .centered-title {
+    font-size: 1.5rem !important;
+    padding: 0.2em 0.7em !important;
+  }
+}
+
+/* About section responsive */
+.about-content {
+  max-width: 700px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  padding: 2.5em 2em;
+  font-size: 1.15rem;
+  color: #23272f;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 2.1;
+  margin: 0 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  font-weight: 300;
+  border-left: 5px solid #bfc9d1;
+}
+@media (max-width: 700px) {
+  .about-content {
+    padding: 1.2em 0.7em;
+    font-size: 1rem;
+    border-left: 3px solid #bfc9d1;
+  }
+}
+
+/* Apartment gallery images responsive */
+.apartment-gallery img {
+  width: 220px;
+  height: 160px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  object-fit: cover;
+  background: #e5e5e5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+@media (max-width: 900px) {
+  .apartment-gallery {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .apartment-gallery img {
+    width: 90vw;
+    max-width: 400px;
+    height: 180px;
+  }
+}
+
+/* Apartment description responsive */
+.apartment-description {
+  max-width: 400px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+  padding: 2em 2em;
+  font-size: 1.13rem;
+  color: #23272f;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.7;
+  margin: 0 16px;
+}
+@media (max-width: 700px) {
+  .apartment-description {
+    padding: 1.2em 0.7em;
+    font-size: 1rem;
+    margin: 0 4px;
+  }
+}
+
+/* Lightbox responsive */
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  background: #fff;
+  display: block;
+  margin: auto;
+}
