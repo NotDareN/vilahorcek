@@ -2,13 +2,21 @@
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <title>Vila Horček | Ubytovanie v Tatrách</title>
-  <!-- Google Fonts for a modern, minimal look -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Lightbox2 CSS (add to your <head> if not present) -->
+  <!-- Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <!-- jQuery for Lightbox2 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    lightbox.option({
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true
+    })
+  </script>
 </head>
 <body>
   <nav class="subpage-nav">
@@ -198,16 +206,6 @@
       </div>
     </div>
   </section>
-  <!-- Make sure jQuery is loaded before Lightbox2 JS for full compatibility -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Lightbox2 JS (add to your <body> before </body> if not present) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <script>
-    lightbox.option({
-      'wrapAround': true,
-      'alwaysShowNavOnTouchDevices': true
-    })
-  </script>
   <script>
     const btn = document.getElementById('about-expand-btn');
     const more = document.getElementById('about-more');
