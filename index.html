@@ -7,6 +7,8 @@
   <!-- Google Fonts for a modern, minimal look -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Lightbox2 CSS (add to your <head> if not present) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
   <nav class="subpage-nav">
@@ -21,7 +23,7 @@
     </a>
   </nav>
   <div class="hero">
-    <img src="obrazky/image0.jpeg" alt="Vila Horček Opening" class="opening-img">
+    <img src="fotkynove/studio/vila-horcek-36.jpg" alt="Vila Horček Opening" class="opening-img">
     <div class="centered-title">
       Vila Horček
     </div>
@@ -31,10 +33,46 @@
   </div>
   <section id="about" class="about-section">
     <div class="about-content">
-      Ubytovanie Vila Horček sa nachádza v Starom Smokovci v oblasti Prešovský kraj 20 km od miesta Štrbské pleso. Ponúka bezplatné Wi-Fi, detské ihrisko, záhradu a bezplatné súkromné parkovisko.<br><br>
-      Každá ubytovacia jednotka má balkón s výhľadom na hory, TV s plochou obrazovkou, dobre vybavenú kuchynku a súkromnú kúpeľňu so sprchou, bezplatnými toaletnými potrebami a sušičom vlasov. K dispozícii je chladnička, mikrovlnná rúra a rýchlovarná kanvica.<br><br>
-      Ak máte chuť preskúmať túto oblasť, v okolí sa môžete venovať lyžovaniu a cyklistike.<br><br>
-      Ubytovanie Vila Horček sa nachádza 24 km od miesta Chodník korunami stromov a 41 km od miesta Dobšinská ľadová jaskyňa. Letisko Poprad-Tatry je vzdialené 10 km.
+      Vila Horček – Váš útulný domov vo Vysokých Tatrách<br><br>
+      Vitajte vo Vile Horček, ktorá sa nachádza v srdci Vysokých Tatier – v pokojnej časti Dolný Smokovec. Ideálna poloha, nádherné výhľady na tatranské štíty a rodinná atmosféra robia z tohto miesta dokonalý únik do prírody.<br><br>
+      Našim hosťom ponúkame:<br>
+      🌲 priestrannú záhradu na oddych,<br>
+      🎠 menšie ihrisko pre deti,<br>
+      🚗 bezplatné súkromné parkovisko,<br>
+      📶 a samozrejme, bezplatné Wi-Fi pripojenie v celom objekte.<br><br>
+      Každá ubytovacia jednotka je vybavená tak, aby ste sa cítili ako doma. Tešiť sa môžete na:<br><br>
+      vlastný balkón s čarovným výhľadom na hory,<br>
+      TV s plochou obrazovkou,<br>
+      kuchynku s chladničkou, mikrovlnkou a rýchlovarnou kanvicou,<br>
+      <span id="about-more" style="display:none;">
+        súkromnú kúpeľňu so sprchou, bezplatnými toaletnými potrebami a sušičom vlasov,<br>
+        sušiak na prádlo a ďalšie drobnosti pre vaše pohodlie.<br><br>
+        Vila sa nachádza len 5 minút chôdze od tatranskej železnice a neďalekých potravín, čo vám zaručí ľahký prístup k doprave aj všetkému potrebnému.<br><br>
+        Okolie ponúka množstvo atrakcií:<br><br>
+        Tatranská Lomnica – 6 km<br>
+        Chodník korunami stromov – 24 km<br>
+        Štrbské Pleso – 20 km<br><br>
+        Či už túžite po horskej turistike, oddychu v prírode alebo rodinnej dovolenke s deťmi, Vila Horček je ideálnym miestom pre vašu tatranskú dovolenku.<br>
+        Tešíme sa na vašu návštevu! 🏔️
+      </span>
+      <div style="text-align:center; margin-top:20px;">
+        <button id="about-expand-btn" style="
+          background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+          color: #fff;
+          border: none;
+          border-radius: 30px;
+          padding: 12px 32px;
+          font-size: 1.1em;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          box-shadow: 0 4px 16px rgba(33,147,176,0.15);
+          cursor: pointer;
+          transition: background 0.3s, transform 0.2s;
+        "
+        onmouseover="this.style.background='linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%)'; this.style.transform='scale(1.05)';"
+        onmouseout="this.style.background='linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%)'; this.style.transform='scale(1)';"
+        >Zobraziť viac <span style="font-size:1.2em;">▼</span></button>
+      </div>
     </div>
     <div class="apartments-buttons">
       <a href="studio.html" class="apartment-btn"><span>Štúdio</span></a>
@@ -42,6 +80,75 @@
       <a href="apartman3.html" class="apartment-btn"><span>Apartmán 3</span></a>
     </div>
   </section>
+  <!-- Gallery Section Start -->
+  <section class="main-gallery-section">
+    <h2 style="text-align:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:2rem; color:#1a2634; margin-bottom:32px; letter-spacing:0.05em;">
+      Galéria Vila Horček
+    </h2>
+    <p style="text-align:center; color:#444; font-size:1.1em; margin-bottom:24px;">
+      Pozrite si atmosféru našich apartmánov a štúdia. Kliknutím na fotku si ju môžete pozrieť vo väčšom rozlíšení.
+    </p>
+    <div class="main-gallery-grid">
+      <!-- 10 visible images from fotkynove (mix studio, apartman2, apartman3) -->
+      <a href="fotkynove/studio/vila-horcek-14.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 1">
+        <img src="fotkynove/studio/vila-horcek-14.jpg" alt="Štúdio foto 1">
+      </a>
+      <a href="fotkynove/studio/vila-horcek-15.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 2">
+        <img src="fotkynove/studio/vila-horcek-15.jpg" alt="Štúdio foto 2">
+      </a>
+      <a href="fotkynove/apartman2/vila-horcek-01.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 1">
+        <img src="fotkynove/apartman2/vila-horcek-01.jpg" alt="Apartmán 2 foto 1">
+      </a>
+      <a href="fotkynove/apartman2/vila-horcek-03.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 2">
+        <img src="fotkynove/apartman2/vila-horcek-03.jpg" alt="Apartmán 2 foto 2">
+      </a>
+      <a href="fotkynove/apartman2/vila-horcek-04.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 3">
+        <img src="fotkynove/apartman2/vila-horcek-04.jpg" alt="Apartmán 2 foto 3">
+      </a>
+      <a href="fotkynove/apartman3/vila-horcek-21.jpg" data-lightbox="main-gallery" data-title="Apartmán 3 foto 1">
+        <img src="fotkynove/apartman3/vila-horcek-21.jpg" alt="Apartmán 3 foto 1">
+      </a>
+      <a href="fotkynove/apartman3/vila-horcek-22.jpg" data-lightbox="main-gallery" data-title="Apartmán 3 foto 2">
+        <img src="fotkynove/apartman3/vila-horcek-22.jpg" alt="Apartmán 3 foto 2">
+      </a>
+      <a href="fotkynove/studio/vila-horcek-31.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 3">
+        <img src="fotkynove/studio/vila-horcek-31.jpg" alt="Štúdio foto 3">
+      </a>
+      <a href="fotkynove/studio/vila-horcek-32.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 4">
+        <img src="fotkynove/studio/vila-horcek-32.jpg" alt="Štúdio foto 4">
+      </a>
+      <a href="fotkynove/apartman2/vila-horcek-05.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 4">
+        <img src="fotkynove/apartman2/vila-horcek-05.jpg" alt="Apartmán 2 foto 4">
+      </a>
+      <!-- Hidden images for Lightbox navigation (all other images from fotkynove) -->
+      <a href="fotkynove/studio/vila-horcek-33.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 5" style="display:none"></a>
+      <a href="fotkynove/studio/vila-horcek-34.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 6" style="display:none"></a>
+      <a href="fotkynove/studio/vila-horcek-35.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 7" style="display:none"></a>
+      <a href="fotkynove/studio/vila-horcek-36.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 8" style="display:none"></a>
+      <a href="fotkynove/studio/vila-horcek-37.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 9" style="display:none"></a>
+      <a href="fotkynove/studio/vila-horcek-38.jpg" data-lightbox="main-gallery" data-title="Štúdio foto 10" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-06.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 5" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-07.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 6" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-08.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 7" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-09.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 8" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-10.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 9" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-11.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 10" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-12.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 11" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-13.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 12" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-14.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 13" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-15.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 14" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-16.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 15" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-17.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 16" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-30.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 17" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-31.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 18" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-32.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 19" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-33.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 20" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-34.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 21" style="display:none"></a>
+      <a href="fotkynove/apartman2/vila-horcek-35.jpg" data-lightbox="main-gallery" data-title="Apartmán 2 foto 22" style="display:none"></a>
+      <!-- Add similar hidden <a> tags for all images in apartman3 and studio folders as needed -->
+    </div>
+  </section>
+  <!-- Gallery Section End -->
   <section class="reviews-section">
     <h2>Hodnotenia hostí</h2>
     <div class="reviews-list">
@@ -91,5 +198,30 @@
       </div>
     </div>
   </section>
+  <!-- Make sure jQuery is loaded before Lightbox2 JS for full compatibility -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Lightbox2 JS (add to your <body> before </body> if not present) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    lightbox.option({
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true
+    })
+  </script>
+  <script>
+    const btn = document.getElementById('about-expand-btn');
+    const more = document.getElementById('about-more');
+    let expanded = false;
+    btn.onclick = function() {
+      expanded = !expanded;
+      if (expanded) {
+        more.style.display = 'inline';
+        btn.innerHTML = 'Zobraziť menej <span style="font-size:1.2em;">▲</span>';
+      } else {
+        more.style.display = 'none';
+        btn.innerHTML = 'Zobraziť viac <span style="font-size:1.2em;">▼</span>';
+      }
+    };
+  </script>
 </body>
 </html>
