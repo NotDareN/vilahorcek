@@ -22,12 +22,12 @@ body {
 
 .opening-img {
   position: absolute;
-  top: 0;
+  top: -60px;           /* Pull image up by 60px (adjust as needed) */
   left: 0;
   width: 100vw;
-  height: 100%;
+  height: calc(100% + 60px); /* Make image taller to fill gap after moving up */
   object-fit: cover;
-  object-position: center 16%; /* Move image up just a bit, shows more bottom */
+  object-position: center top;
   z-index: 1;
   margin: 0;
   padding: 0;
@@ -819,3 +819,4 @@ img {
 }
 @media (max-width: 500px) {
   .main-gallery-grid { grid-template-columns: 1fr; }
+}
