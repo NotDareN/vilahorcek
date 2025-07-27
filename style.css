@@ -8,14 +8,16 @@ body {
 .hero {
   position: relative;
   width: 100vw;
-  height: 80vh;
-  min-height: 400px;
-  max-height: 100vh;
+  height: 82vh;           /* Slightly taller, shows more bottom */
+  min-height: 340px;
+  max-height: 82vh;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: #e5e5e5;
+  margin: 0;
+  padding: 0;
 }
 
 .opening-img {
@@ -23,10 +25,12 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
-  object-position: center 85%; /* Adjust this value to show the door */
+  object-position: center 16%; /* Move image up just a bit, shows more bottom */
   z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .centered-title {
@@ -339,7 +343,7 @@ body {
 }
 
 .subpage-nav {
-  padding: 48px 0 0 0; /* More top space */
+  padding: 21px 0 0 0; /* More top space */
   text-align: center;
 }
 .logo-link {
